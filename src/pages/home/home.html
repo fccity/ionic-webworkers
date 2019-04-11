@@ -1,14 +1,18 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title text-center>
+      Ionic Web Worker example
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <progress-bar [progress]="progress"></progress-bar>
+  <button ion-button (click)="runwithWorker()">Run with worker</button>
+  <button ion-button (click)="runInMainThread()">Run</button>
+  <button ion-button (click)="resetProgressBar()">Reset</button>
+  <h1>{{ state }}</h1>
+
+  
+  
 </ion-content>
